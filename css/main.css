@@ -69,7 +69,7 @@
 }
 #main-visual .pagination {
   position: absolute;
-  bottom: 50px;
+  bottom: 80px;
   z-index: 3;
   display: flex;
   justify-content: center;
