@@ -98,7 +98,7 @@
   // padding-left: 50px;
   // padding-right: 50px;
 
-  padding: 100px 0;
+  padding: 40px 0;
   // background-color: #000;
   // background-image: url("");
   // background-position: url("");
@@ -109,20 +109,20 @@
   // font-size: 40px;
   // font-family: "fdsjfkd";
   h2 {
-    font-size: $h2;
+    font-size: clamp(18px, 10vw, 24px);
     color: $main-color;
     font-weight: 700;
     margin-bottom: 30px;
   }
   .banner {
-    margin-top: 100px;
+    margin-top: 80px;
   }
   .btns {
     position: absolute;
-    right: 0;
-    top: 50px;
+    right: 20px;
+    top: 120px;
     i {
-      font-size: 32px;
+      font-size: 24px;
     }
   }
 }
@@ -134,7 +134,7 @@
   .banner {
     ul {
       li {
-        height: 380px;
+        height: 300px;
         width: 50%;
         position: relative;
         overflow: hidden;
@@ -152,8 +152,9 @@
         .txt {
           position: absolute;
           color: #fff;
-          left: 50px;
-          bottom: -50px;
+          left: 20px;
+          right: 20px;
+          bottom: 20px;
           // transition-property: bottom, color;
           // transition-duration: 0.5s;
           // transition-timing-function: ease-in-out;
@@ -162,12 +163,15 @@
           transition: all 0.5s ease-in-out;
 
           h3 {
-            font-size: $h3 * 1.5;
-            margin-bottom: 40px;
+            font-size: clamp(18px, 8vw, 24px);
+            margin-bottom: 20px;
             font-weight: 500;
           }
           p {
             line-height: 1.5;
+            br {
+              content: "";
+            }
           }
         }
       }
@@ -177,7 +181,9 @@
 
 #activity {
   overflow: hidden;
-
+  .btns {
+    top: 60px;
+  }
   .banner {
     ul {
       li {
@@ -193,7 +199,7 @@
           margin-top: 10px;
           line-height: 1.5;
           h3 {
-            font-size: $h3;
+            font-size: clamp(18px, 8vw, 24px);
             font-weight: 500;
             @include multiElilipsis(2, 1.2);
           }
@@ -211,6 +217,9 @@
   background-color: #f4f4f4;
   .container {
     overflow: hidden;
+  }
+  .btns {
+    top: 60px;
   }
   .banner {
     ul {

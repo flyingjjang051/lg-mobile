@@ -87,24 +87,24 @@
 }
 
 .contents-box {
-  padding: 100px 0;
+  padding: 40px 0;
 }
 .contents-box h2 {
-  font-size: 36px;
+  font-size: clamp(18px, 10vw, 24px);
   color: #dd3156;
   font-weight: 700;
   margin-bottom: 30px;
 }
 .contents-box .banner {
-  margin-top: 100px;
+  margin-top: 80px;
 }
 .contents-box .btns {
   position: absolute;
-  right: 0;
-  top: 50px;
+  right: 20px;
+  top: 120px;
 }
 .contents-box .btns i {
-  font-size: 32px;
+  font-size: 24px;
 }
 
 #introduce {
@@ -112,7 +112,7 @@
   background: #f4f4f4;
 }
 #introduce .banner ul li {
-  height: 380px;
+  height: 300px;
   width: 50%;
   position: relative;
   overflow: hidden;
@@ -128,21 +128,28 @@
 #introduce .banner ul li .txt {
   position: absolute;
   color: #fff;
-  left: 50px;
-  bottom: -50px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
   transition: all 0.5s ease-in-out;
 }
 #introduce .banner ul li .txt h3 {
-  font-size: 36px;
-  margin-bottom: 40px;
+  font-size: clamp(18px, 8vw, 24px);
+  margin-bottom: 20px;
   font-weight: 500;
 }
 #introduce .banner ul li .txt p {
   line-height: 1.5;
 }
+#introduce .banner ul li .txt p br {
+  content: "";
+}
 
 #activity {
   overflow: hidden;
+}
+#activity .btns {
+  top: 60px;
 }
 #activity .banner ul li img {
   height: 300px;
@@ -157,7 +164,7 @@
   line-height: 1.5;
 }
 #activity .banner ul li .txt h3 {
-  font-size: 24px;
+  font-size: clamp(18px, 8vw, 24px);
   font-weight: 500;
   overflow: hidden;
   display: -webkit-box;
@@ -176,6 +183,9 @@
 }
 #notice .container {
   overflow: hidden;
+}
+#notice .btns {
+  top: 60px;
 }
 #notice .banner ul li {
   border-top: 3px solid #000;

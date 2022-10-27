@@ -452,8 +452,8 @@
       gnb.toggleClass("on");
       const depth02 = $("#gnb .depth02");
       const depth01 = $("#gnb .depth01");
-      depth01.delay(400).removeClass("on");
-      depth02.delay(400).slideUp();
+      depth01.stop().delay(400).removeClass("on");
+      depth02.stop().delay(400).slideUp();
     });
 
     depth01.on("click", function (e) {
@@ -465,7 +465,7 @@
       siblings.slideUp();
       if (depth02.length > 0) {
         e.preventDefault();
-        depth02.slideToggle();
+        depth02.stop().slideToggle();
       }
     });
 
@@ -488,7 +488,7 @@
     });
 
     const introduceSlider = new Swiper("#introduce .banner", {
-      slidesPerView: 2,
+      slidesPerView: 1,
       loop: true,
       spaceBetween: 20,
       //centeredSlides: true,
@@ -498,8 +498,7 @@
       },
     });
     const activitySlider = new Swiper("#activity  .banner", {
-      slidesPerView: 4,
-      slidesPerGroup: 4,
+      slidesPerView: 1,
       loop: true,
       spaceBetween: 20,
 
@@ -510,8 +509,7 @@
       },
     });
     const noticeSlider = new Swiper("#notice  .banner", {
-      slidesPerView: 3,
-      slidesPerGroup: 3,
+      slidesPerView: 1,
       loop: true,
       spaceBetween: 20,
 
