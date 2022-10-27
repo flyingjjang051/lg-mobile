@@ -29,7 +29,7 @@
         <nav id="gnb">
           <ul class="list">
             <li>
-              <a href="introduce.html" class="depth01">LG재단</a>
+              <a href="#" class="depth01">LG재단 <i class="fa-solid fa-angle-down"></i></a>
               <ul class="depth02">
                 <li><a href="">재단 소개</a></li>
                 <li><a href="">설립자</a></li>
@@ -37,7 +37,7 @@
               </ul>
             </li>
             <li>
-              <a href="" id="vip" class="depth01">연암문화재단</a>
+              <a href="" id="vip" class="depth01">연암문화재단 <i class="fa-solid fa-angle-down"></i></a>
               <ul class="depth02">
                 <li><a href="">재단 소개</a></li>
                 <li><a href="">설립자</a></li>
@@ -450,13 +450,23 @@
     btnAll.on("click", function () {
       btnAll.toggleClass("on");
       gnb.toggleClass("on");
+      const depth02 = $("#gnb .depth02");
+      const depth01 = $("#gnb .depth01");
+      depth01.delay(400).removeClass("on");
+      depth02.delay(400).slideUp();
     });
 
     depth01.on("click", function (e) {
-      e.preventDefault();
-      //console.log("depth01 click");
       const depth02 = $(this).next();
-      depth02.slideToggle();
+      const siblings = $(this).parent().siblings().find(".depth02");
+      const siblingsDepth01 = $(this).parent().siblings().find(".depth01");
+      $(this).toggleClass("on");
+      siblingsDepth01.removeClass("on");
+      siblings.slideUp();
+      if (depth02.length > 0) {
+        e.preventDefault();
+        depth02.slideToggle();
+      }
     });
 
     const mainSlider = new Swiper("#main-visual", {

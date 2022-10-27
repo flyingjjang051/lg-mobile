@@ -124,6 +124,17 @@ header .util .btn-all span:nth-child(3) {
   font-weight: 500;
   font-size: 18px;
   box-sizing: border-box;
+  position: relative;
+}
+#gnb .list > li .depth01.on i {
+  transform: translateY(-50%) rotate(-180deg);
+}
+#gnb .list > li .depth01 i {
+  transition: all 0.25s ease;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 #gnb .list > li .depth01:before {
   content: "";

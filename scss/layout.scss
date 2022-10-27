@@ -131,6 +131,19 @@ header {
         font-weight: 500;
         font-size: 18px;
         box-sizing: border-box;
+        position: relative;
+        &.on {
+          i {
+            transform: translateY(-50%) rotate(-180deg);
+          }
+        }
+        i {
+          transition: all 0.25s ease;
+          position: absolute;
+          right: 20px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
         &:before {
           content: "";
           display: block;
