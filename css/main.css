@@ -200,6 +200,9 @@
   line-height: 1.5;
   margin: 30px 0;
 }
+#notice .banner ul li p {
+  line-height: 1.5;
+}
 #notice .banner ul li .date {
   margin-top: 50px;
 }
