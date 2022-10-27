@@ -168,11 +168,10 @@ header .util .btn-all span:nth-child(3) {
 }
 
 footer #family-site {
-  margin: 100px 0;
+  margin: 30px 0;
 }
-footer #family-site ul {
-  display: flex;
-  justify-content: space-between;
+footer #family-site ul li {
+  width: auto;
 }
 footer #family-site ul li img {
   height: 30px;
@@ -180,26 +179,33 @@ footer #family-site ul li img {
 footer #footer {
   background-color: #000;
   color: #fff;
-  padding: 100px 0;
+  padding: 30px 0;
 }
 footer #footer .container {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+}
+footer #footer .container .info {
+  font-size: 14px;
 }
 footer #footer .container .info .util {
   margin-bottom: 40px;
 }
 footer #footer .container .info .util ul {
   display: flex;
-}
-footer #footer .container .info .util ul li {
-  margin-right: 20px;
+  justify-content: space-between;
 }
 footer #footer .container .info .address {
   margin-bottom: 40px;
 }
 footer #footer .container .info .address ul li {
   margin: 10px 0;
+}
+footer #footer .container .sns {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
 }
 footer #footer .container .sns ul {
   display: flex;
@@ -212,8 +218,8 @@ footer #footer .container .sns ul li a {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   background-color: #333;
   border-radius: 100px;
   transition: all 0.5s ease;
@@ -222,5 +228,5 @@ footer #footer .container .sns ul li a:hover {
   background-color: #dd3156;
 }
 footer #footer .container .sns .nts img {
-  height: 50px;
+  height: 40px;
 }
